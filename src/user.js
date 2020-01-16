@@ -7,7 +7,7 @@ const User = ({user:{id, name,bio}, setCurrent}) => {
 
 
     const handleClick = () => {
-        axios.delete(`http://localhost:8001/api/users/${id}`)
+        axios.delete(`https://node-project1-test.herokuapp.com/api/users/${id}`)
         .then( res => {
             M.toast({ html: `${res.data.name} is successfully deleted` });
        
